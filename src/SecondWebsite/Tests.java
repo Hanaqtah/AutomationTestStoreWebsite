@@ -176,33 +176,33 @@ public class Tests extends Data{
 			Thread.sleep(2000);
 		
 		// SOLUTION 1
-		/*
-		 * for (int i=0; i<10; i++) 
-		 *	{
-		 *  // gathering all elements in one place
-		 *		List<WebElement> AllItems = driver.findElements(By.className("prdocutname"));
-		 *
-		 *	// accessing random elements
-		 *		int RandomIndexForTheItem = rand.nextInt(AllItems.size());
-		 *
-		 *	// clicking on item to view its description page
-		 *		AllItems.get(RandomIndexForTheItem).click();
+		
+		  for (int i=0; i<10; i++) 
+		 	{
+		   // gathering all elements in one place
+		 		List<WebElement> AllItems = driver.findElements(By.className("prdocutname"));
+		 
+		 	// accessing random elements
+		 		int RandomIndexForTheItem = rand.nextInt(AllItems.size());
+		 
+		 	// clicking on item to view its description page
+		 		AllItems.get(RandomIndexForTheItem).click();
 			
 			// checking the problematic products 
-		 *		boolean OutOfStock = driver.getPageSource().contains("Out of Stock");
-		 *		boolean SizeRequired = driver.getCurrentUrl().contains("product_id=116");
+		 		boolean OutOfStock = driver.getPageSource().contains("Out of Stock");
+		 		boolean SizeRequired = driver.getCurrentUrl().contains("product_id=116");
 			
-		 *	if (!OutOfStock && !SizeRequired )
-		 *	{
-		 *	// adding items 
-		 *		WebElement AddToCartBtn = driver.findElement(By.cssSelector(".cart"));
-		 *		AddToCartBtn.click();
-		 *		break;
-		 *	}
-		 *	// back to products page
-		 *		driver.navigate().back();
-		 *	}		
-		 */
+		 	if (!OutOfStock && !SizeRequired )
+		 	{
+		 	// adding items 
+		 		WebElement AddToCartBtn = driver.findElement(By.cssSelector(".cart"));
+		 		AddToCartBtn.click();
+		 		break;
+		 	}
+		 	// back to products page
+		 		driver.navigate().back();
+		 	}		
+		 
 		
 		// SOLUTION 2
 		/*
